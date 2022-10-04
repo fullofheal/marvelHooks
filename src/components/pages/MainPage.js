@@ -10,13 +10,13 @@ import decoration from '../../resources/img/vision.png';
 
 
 const MainPage = () => {
+    console.log('render');
 
     const [selectedChar, setChar] = useState(null);
 
     const onCharSelected = (id) => {
         setChar(id);
     }
-
     return (
         <>
             <Helmet>
@@ -31,7 +31,8 @@ const MainPage = () => {
             </ErrorBoundary>
             <div className="char__content">
                 <ErrorBoundary>
-                    <CharList onCharSelected={onCharSelected}/>
+                    <CharList 
+                    onCharSelected={onCharSelected}/>
                 </ErrorBoundary>
                 <div>
                     <ErrorBoundary>
